@@ -25,3 +25,29 @@ img {
   --BACKGROUND: #22223b;
   --SECTION: #4a4e69;
 }
+/* || GENERAL STYLES */
+header {
+  padding: 0.5rem;
+}
+.top-nav {
+  position: relative;
+}
+.top-nav h2 {
+  position: absolute;
+  left: -100000px;
+}
+.top-nav figure figcaption h1 {
+  font-size: 1rem;
+}
+.top-nav figure img {
+  height: 50px;
+  width: auto;
+}
+.top-nav ul li {
+  list-style-type: none;
+  list-style-position: inside;
+}
+.top-nav ul li form label {
+  position: absolute;
+  left: -10000px;
+}
