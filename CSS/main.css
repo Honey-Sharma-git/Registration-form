@@ -32,6 +32,9 @@ body {
   min-height: 200vh;
   background-color: var(--BACKGROUND);
 }
+main {
+  height: 200vh;
+}
 header {
   padding: 0.5rem 3rem;
   background-color: var(--BACKGROUND);
@@ -119,12 +122,7 @@ header .top-nav ul li:first-child figure {
   column-gap: 20px;
 }
 /* || GENERAL STYLES */
-body {
-  background-color: var(--BACKGROUND);
-}
-main {
-  height: 200vh;
-}
+
 footer {
   background-color: var(--BACKGROUND);
   display: grid;
