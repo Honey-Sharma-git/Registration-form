@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 /* || CSS RESET */
 *,
 * ::after,
@@ -29,6 +30,10 @@ img {
 /* || GENERAL STYLES */
 header {
   padding: 0.5rem;
+  background-color: var(--BACKGROUND);
+  font-family: Roboto;
+  font-weight: lighter;
+  letter-spacing: 1.5px;
 }
 header .top-nav {
   position: relative;
@@ -39,6 +44,7 @@ header .top-nav h2 {
 }
 header .top-nav figure figcaption h1 {
   font-size: 1rem;
+  font-weight: inherit;
 }
 header .top-nav figure img {
   height: 50px;
@@ -70,4 +76,11 @@ header .top-nav ul li a:is(:hover, :focus) {
 header .top-nav ul li a:active {
   color: var(--TAP);
   -webkit-tap-highlight-color: var(--TAP);
+}
+header .top-nav ul li form input {
+  background-color: var(--SECTION);
+  height: 30px;
+  border: none;
+  border: 1px solid var(--OUTLINE);
+  border-radius: 30px;
 }
