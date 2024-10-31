@@ -3,8 +3,8 @@
 * ::after,
 * ::before {
   box-sizing: border-box;
-  outline: 1px solid lime;
-  background-color: hsla(0, 100%, 50%, 0.05);
+  /* outline: 1px solid lime; */
+  /* background-color: hsla(0, 100%, 50%, 0.05); */
 }
 * {
   margin: 0;
@@ -24,4 +24,47 @@ img {
   --TEXT: #f2e9e4;
   --BACKGROUND: #22223b;
   --SECTION: #4a4e69;
+}
+/* || GENERAL STYLES */
+body {
+  background-color: var(--BACKGROUND);
+}
+main {
+  height: 200vh;
+}
+footer {
+  background-color: var(--BACKGROUND);
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 70px;
+  position: sticky;
+  bottom: 0;
+  padding: 1rem;
+  border: 1px solid var(--UNIMP-TEXT);
+  border-radius: 10px;
+}
+footer nav {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+footer nav ul {
+  width: 80%;
+  list-style-type: none;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+}
+footer nav ul li {
+  display: grid;
+  place-items: stretch;
+  width: 100%;
+  text-align: center;
+  color: var(--TEXT);
+}
+footer nav ul li a {
+  color: var(--TEXT);
+  text-decoration: none;
 }
