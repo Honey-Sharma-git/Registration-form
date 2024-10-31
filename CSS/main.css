@@ -3,8 +3,8 @@
 * ::after,
 * ::before {
   box-sizing: border-box;
-  outline: 1px solid lime;
-  background-color: hsla(0, 100%, 50%, 0.05);
+  /* outline: 1px solid lime; */
+  /* background-color: hsla(0, 100%, 50%, 0.05); */
 }
 * {
   margin: 0;
@@ -24,30 +24,50 @@ img {
   --TEXT: #f2e9e4;
   --BACKGROUND: #22223b;
   --SECTION: #4a4e69;
+  --TAP: hsla(0, 0%, 70%, 0.2);
 }
 /* || GENERAL STYLES */
 header {
   padding: 0.5rem;
 }
-.top-nav {
+header .top-nav {
   position: relative;
 }
-.top-nav h2 {
+header .top-nav h2 {
   position: absolute;
   left: -100000px;
 }
-.top-nav figure figcaption h1 {
+header .top-nav figure figcaption h1 {
   font-size: 1rem;
 }
-.top-nav figure img {
+header .top-nav figure img {
   height: 50px;
   width: auto;
 }
-.top-nav ul li {
+header .top-nav ul li {
   list-style-type: none;
   list-style-position: inside;
 }
-.top-nav ul li form label {
+header .top-nav ul li form label {
   position: absolute;
   left: -10000px;
+}
+
+header .top-nav ul li a,
+header .top-nav ul li a :visited {
+  color: var(--LINKS);
+  text-decoration: none;
+  outline-color: var(--OUTLINE);
+  outline-offset: 3px;
+}
+header .top-nav ul li figcaption a:hover {
+  text-decoration: none;
+}
+header .top-nav ul li a:is(:hover, :focus) {
+  text-decoration: underline;
+  font-size: 1.1rem;
+}
+header .top-nav ul li a:active {
+  color: var(--TAP);
+  -webkit-tap-highlight-color: var(--TAP);
 }
