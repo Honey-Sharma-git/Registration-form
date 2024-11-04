@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
 /* || CSS RESET */
 *,
 * ::after,
 * ::before {
   box-sizing: border-box;
-  /* outline: 1px solid lime; */
+  outline: 1px solid lime;
   /* background-color: hsla(0, 100%, 50%, 0.05); */
 }
 * {
@@ -14,34 +15,43 @@
 img {
   display: block;
 }
+button {
+  font: inherit;
+}
+
 /*|| VARIABLES */
-/* COLORS */
 :root {
-  --BUTTON: #c9ada7;
-  --LINKS: #c9ada7;
-  --OUTLINE: #c9ada7;
-  --UNIMP-TEXT: #9a8c98;
+  /* COLORS */
+  --BG-COLOR: #22223b;
+  --BUTTON-BG-COLOR: #c9ada7;
+  --LINK-COLOR: #c9ada7;
+  --OUTLINE-COLOR: #c9ada7;
   --PLACEHOLDER: #9a8c98;
-  --TEXT: #f2e9e4;
-  --BACKGROUND: #22223b;
   --SECTION: #4a4e69;
   --TAP: hsla(0, 0%, 70%, 0.2);
+  --TEXT: #f2e9e4;
+  --UNIMP-TEXT: #9a8c98;
+
+  /* STYLES */
+  --FF: "Open Sans", sans-serif;
+  --THROW-OUT: -1000000px;
 }
+
 /* || GENERAL STYLES */
 body {
+  background-color: var(--BG-COLOR);
+  font-family: var(--FF);
   min-height: 200vh;
-  background-color: var(--BACKGROUND);
 }
 main {
   height: 200vh;
 }
 header {
-  padding: 0.5rem 3rem;
-  background-color: var(--BACKGROUND);
-  font-family: "Open Sans";
+  background-color: var(--BG-COLOR);
+  border: 1px solid var(--UNIMP-TEXT);
   font-weight: lighter;
   letter-spacing: 1.5px;
-  border: 1px solid var(--UNIMP-TEXT);
+  padding: 0.5rem 3rem;
   position: sticky;
   top: 0;
 }
@@ -50,7 +60,7 @@ header .top-nav {
 }
 header .top-nav h2 {
   position: absolute;
-  left: -100000px;
+  left: var(--THROW-OUT);
 }
 header .top-nav figure figcaption h1 {
   font-size: 1rem;
@@ -66,74 +76,65 @@ header .top-nav ul li {
 }
 header .top-nav ul li form label {
   position: absolute;
-  left: -10000px;
+  left: var(--THROW-OUT);
 }
-
-header .top-nav ul li a,
-header .top-nav ul li a :visited {
-  color: var(--LINKS);
+header .top-nav ul li :is(a, a:visited) {
+  color: var(--LINK-COLOR);
   text-decoration: none;
-  outline-color: var(--OUTLINE);
-  outline-offset: 3px;
 }
 header .top-nav ul li figcaption a:hover {
   text-decoration: none;
 }
 header .top-nav ul li a:is(:hover, :focus) {
-  text-decoration: underline;
   font-size: 1.1rem;
+  text-decoration: underline;
+  transition: font-size 0.3s;
 }
+/* need to check its requirement */
 header .top-nav ul li a:active {
   color: var(--TAP);
   -webkit-tap-highlight-color: var(--TAP);
 }
 header .top-nav ul li form input {
   background-color: var(--SECTION);
-  height: 30px;
-  border: none;
-  border: 1px solid var(--OUTLINE);
   border-radius: 30px;
-  padding: 1rem;
+  border: 1px solid var(--OUTLINE-COLOR);
   color: var(--TEXT);
+  font-family: var(--FF);
   font-style: italic;
-  font-family: "Open Sans";
-}
-header .top-nav ul li form input::placeholder {
-  color: var(--UNIMP-TEXT);
-  font-style: italic;
-  font-family: "Open Sans";
+  height: 30px;
+  padding: 1rem;
 }
 
 /* ||  GRID LAYOUT SETTINGS */
 header .top-nav ul {
+  column-gap: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr repeat(3, auto);
   grid-template-rows: 30px;
   place-items: center;
-  column-gap: 20px;
 }
 header .top-nav ul li:first-child {
   place-self: center start;
 }
 header .top-nav ul li:first-child figure {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
   align-items: center;
   column-gap: 20px;
-}
-/* || GENERAL STYLES */
-
-footer {
-  background-color: var(--BACKGROUND);
   display: grid;
-  place-items: center;
-  width: 100%;
-  min-height: 70px;
-  position: sticky;
-  bottom: 0;
-  padding: 1rem;
+  grid-template-columns: repeat(2, auto);
+}
+
+/* || GENERAL STYLES */
+footer {
+  background-color: var(--BG-COLOR);
   border: 1px solid var(--UNIMP-TEXT);
-  border-radius: 10px;
+  bottom: 0;
+  display: grid;
+  /* min-height: 70px; */
+  padding: 1rem;
+  place-items: center;
+  position: sticky;
+  /* width: 100%; */
 }
 footer nav {
   display: grid;
@@ -141,19 +142,18 @@ footer nav {
   width: 100%;
 }
 footer nav ul {
-  width: 80%;
-  list-style-type: none;
   display: grid;
-  place-items: center;
-  grid-template-columns: repeat(3, auto);
   gap: 10px;
+  grid-template-columns: repeat(3, auto);
+  list-style-type: none;
+  place-items: center;
+  width: 80%;
 }
 footer nav ul li {
   display: grid;
   place-items: stretch;
   width: 100%;
   text-align: center;
-  color: var(--TEXT);
 }
 footer nav ul li a {
   color: var(--TEXT);
