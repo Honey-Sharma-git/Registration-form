@@ -37,13 +37,14 @@
   </head>
   <body>
     <header>
-      <nav class="top-nav">
-        <h2>Top navigation links</h2>
+      <nav class="topNav">
+        <h2 class="topNav__title">Top navigation links</h2>
         <ul>
           <li>
             <figure>
               <a href=""
                 ><img
+                  class="header__img"
                   src="Images/DesignStripes-Logo.png"
                   alt="DesignStripes logo"
                   title="Logo"
@@ -57,7 +58,11 @@
             </figure>
           </li>
           <li>
-            <form action="https://httpbin.org/get" method="get">
+            <form
+              class="topNav__form"
+              action="https://httpbin.org/get"
+              method="get"
+            >
               <label for="search-bar">Search:</label>
               <input
                 type="search"
@@ -73,8 +78,8 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <form action="https://httpbin.org/get" method="get">
+    <main class="main">
+      <form class="main__form" action="https://httpbin.org/get" method="get">
         <fieldset>
           <legend>Personal Info</legend>
         </fieldset>
@@ -86,8 +91,8 @@
         </fieldset>
       </form>
     </main>
-    <footer>
-      <nav>
+    <footer class="footer">
+      <nav class="footer__nav">
         <ul>
           <li>
             <a href="">link-1</a>

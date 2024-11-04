@@ -5,7 +5,7 @@
 * ::after,
 * ::before {
   box-sizing: border-box;
-  outline: 1px solid lime;
+  /* outline: 1px solid lime; */
   /* background-color: hsla(0, 100%, 50%, 0.05); */
 }
 * {
@@ -37,21 +37,16 @@ button {
   --THROW-OUT: -1000000px;
 }
 
-/* || GENERAL STYLES */
+/* || HEADER SECTION STYLES */
 body {
-
-
   background-color: var(--BG-COLOR);
   font-family: var(--FF);
-
   min-height: 200vh;
 }
 main {
   height: 200vh;
 }
 header {
-
-
   background-color: var(--BG-COLOR);
   border: 1px solid var(--UNIMP-TEXT);
   font-weight: lighter;
@@ -60,51 +55,45 @@ header {
   position: sticky;
   top: 0;
 }
-header .top-nav {
+.topNav {
   position: relative;
 }
-header .top-nav h2 {
+.topNav__title {
   position: absolute;
   left: var(--THROW-OUT);
 }
-header .top-nav figure figcaption h1 {
+header .topNav figure figcaption h1 {
   font-size: 1rem;
   font-weight: inherit;
 }
-header .top-nav figure img {
+.header__img {
   height: 50px;
   width: auto;
 }
-header .top-nav ul li {
+header .topNav ul li {
   list-style-type: none;
   list-style-position: inside;
 }
-header .top-nav ul li form label {
+.topNav__form label {
   position: absolute;
   left: var(--THROW-OUT);
 }
 
-header .top-nav ul li :is(a, a:visited) {
+header .topNav ul li :is(a, a:visited) {
   color: var(--LINK-COLOR);
   text-decoration: none;
 }
-header .top-nav ul li figcaption a:hover {
+header .topNav ul li figcaption a:hover {
   text-decoration: none;
 }
-header .top-nav ul li a:is(:hover, :focus) {
+header .topNav ul li a:is(:hover, :focus) {
   font-size: 1.1rem;
   text-decoration: underline;
   transition: font-size 0.3s;
 }
-/* need to check its requirement */
-header .top-nav ul li a:active {
-  color: var(--TAP);
-  -webkit-tap-highlight-color: var(--TAP);
-}
-header .top-nav ul li form input {
+.topNav__form input {
   background-color: var(--SECTION);
   border-radius: 30px;
-
   border: 1px solid var(--OUTLINE-COLOR);
   color: var(--TEXT);
   font-family: var(--FF);
@@ -113,43 +102,40 @@ header .top-nav ul li form input {
   padding: 1rem;
 }
 
-/* ||  GRID LAYOUT SETTINGS */
-header .top-nav ul {
+/* ||  HEADER LAYOUT STYLES */
+header .topNav ul {
   column-gap: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr repeat(3, auto);
   grid-template-rows: 30px;
   place-items: center;
 }
-header .top-nav ul li:first-child {
+header .topNav ul li:first-child {
   place-self: center start;
 }
-header .top-nav ul li:first-child figure {
+header .topNav ul li:first-child figure {
   align-items: center;
   column-gap: 20px;
   display: grid;
   grid-template-columns: repeat(2, auto);
 }
 
-/* || GENERAL STYLES */
+/* || FOOTER SECTION STYLES */
 footer {
-
   background-color: var(--BG-COLOR);
   border: 1px solid var(--UNIMP-TEXT);
   bottom: 0;
   display: grid;
-  /* min-height: 70px; */
   padding: 1rem;
   place-items: center;
   position: sticky;
-  /* width: 100%; */
 }
-footer nav {
+.footer__nav {
   display: grid;
   place-items: center;
   width: 100%;
 }
-footer nav ul {
+.footer__nav ul {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(3, auto);
@@ -157,14 +143,15 @@ footer nav ul {
   place-items: center;
   width: 80%;
 }
-footer nav ul li {
+.footer__nav ul li {
   color: var(--TEXT);
   display: grid;
   place-items: stretch;
   text-align: center;
-
 }
-footer nav ul li a {
+.footer__nav ul li a {
   color: var(--TEXT);
   text-decoration: none;
 }
+
+/* || MAIN SECTION STYLES */
