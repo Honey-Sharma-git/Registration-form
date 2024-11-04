@@ -39,14 +39,19 @@ button {
 
 /* || GENERAL STYLES */
 body {
+
+
   background-color: var(--BG-COLOR);
   font-family: var(--FF);
+
   min-height: 200vh;
 }
 main {
   height: 200vh;
 }
 header {
+
+
   background-color: var(--BG-COLOR);
   border: 1px solid var(--UNIMP-TEXT);
   font-weight: lighter;
@@ -78,6 +83,7 @@ header .top-nav ul li form label {
   position: absolute;
   left: var(--THROW-OUT);
 }
+
 header .top-nav ul li :is(a, a:visited) {
   color: var(--LINK-COLOR);
   text-decoration: none;
@@ -98,6 +104,7 @@ header .top-nav ul li a:active {
 header .top-nav ul li form input {
   background-color: var(--SECTION);
   border-radius: 30px;
+
   border: 1px solid var(--OUTLINE-COLOR);
   color: var(--TEXT);
   font-family: var(--FF);
@@ -126,6 +133,7 @@ header .top-nav ul li:first-child figure {
 
 /* || GENERAL STYLES */
 footer {
+
   background-color: var(--BG-COLOR);
   border: 1px solid var(--UNIMP-TEXT);
   bottom: 0;
@@ -150,10 +158,11 @@ footer nav ul {
   width: 80%;
 }
 footer nav ul li {
+  color: var(--TEXT);
   display: grid;
   place-items: stretch;
-  width: 100%;
   text-align: center;
+
 }
 footer nav ul li a {
   color: var(--TEXT);
